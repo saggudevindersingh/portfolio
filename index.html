@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer</title>
+
+  <meta name="description" content="Devinder Singh Saggu - Senior Full Stack & Distributed Systems Engineer with 10+ years building cloud-native architectures, event-driven platforms, and AI-driven workflows using Java, Spring Boot, React, Python, Docker, Azure & AWS.">
+  <meta name="author" content="Devinder Singh Saggu">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer">
+  <meta property="og:description" content="10+ years engineering scalable backend services, event-driven distributed platforms, and responsive web applications using Java, Spring Boot, React, Python, Docker, and Azure/AWS.">
+  <meta property="og:image" content="profile.jpg">
+  <!-- TODO: set og:url to your deployed domain once hosted -->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer">
+  <meta name="twitter:description" content="10+ years engineering scalable backend services, event-driven distributed platforms, and responsive web applications.">
+  <meta name="twitter:image" content="profile.jpg">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -48,8 +63,8 @@
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-        <span class="text-sky-400 font-mono">&lt;DS&gt;</span> Devinder Saggu
+      <a href="#about" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="text-sky-400 font-mono">&lt;DS&gt;</span> Devinder Singh Saggu
       </a>
       <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
@@ -58,9 +73,23 @@
         <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
         <a href="#education" class="hover:text-sky-400 transition-colors">Education</a>
       </div>
-      <a href="mailto:saggudevindersingh@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 transition-all shadow-lg shadow-sky-500/20">
-        <i class="fa-regular fa-envelope"></i> Get in Touch
-      </a>
+      <div class="flex items-center gap-2">
+        <a href="mailto:saggudevindersingh@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 transition-all shadow-lg shadow-sky-500/20">
+          <i class="fa-regular fa-envelope"></i> Get in Touch
+        </a>
+        <button id="mobile-menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-300 hover:text-sky-400 hover:bg-slate-900 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/80 bg-slate-950/95 backdrop-blur-md">
+      <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#education" class="hover:text-sky-400 transition-colors">Education</a>
+      </div>
     </div>
   </nav>
 
@@ -101,7 +130,7 @@
         </div>
 
         <div class="flex flex-wrap gap-4 pt-2">
-          <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
+          <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
             <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
           </a>
           <a href="tel:+16135012158" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold transition-all flex items-center gap-2">
@@ -125,7 +154,7 @@
                 <p class="text-white font-bold text-sm">Devinder Singh Saggu</p>
                 <p class="text-slate-400 text-xs">Senior Full Stack & Distributed Systems Engineer</p>
               </div>
-              <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" class="shrink-0 text-sky-400 hover:text-sky-300 transition-colors" aria-label="LinkedIn Profile">
+              <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="shrink-0 text-sky-400 hover:text-sky-300 transition-colors" aria-label="LinkedIn Profile">
                 <i class="fa-brands fa-linkedin text-2xl"></i>
               </a>
             </div>
@@ -142,7 +171,7 @@
         <p class="text-sky-400 font-mono text-sm uppercase tracking-widest font-semibold">Career History</p>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Professional Experience</h2>
       </div>
-      <p class="text-slate-400 max-w-md text-sm">Demonstrated success leading architectural decisions, implementing event-driven pipelines, and elevating system performance across enterprise platforms[cite: 1].</p>
+      <p class="text-slate-400 max-w-md text-sm">Demonstrated success leading architectural decisions, implementing event-driven pipelines, and elevating system performance across enterprise platforms.</p>
     </div>
 
     <div class="space-y-8 relative before:absolute before:inset-0 before:left-3 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-800">
@@ -160,10 +189,12 @@
           <h3 class="text-xl font-bold text-white">Senior Full Stack Developer</h3>
           <p class="text-sky-400 text-sm font-medium mb-4">BASF</p>
           <ul class="text-slate-300 text-sm space-y-2 list-disc list-inside">
-            <li>Led development of Spring Boot apps processing agricultural data across US & Canadian regions[cite: 1].</li>
-            <li>Implemented event-driven serverless data pipelines using <strong>Azure Functions</strong> to ingest data into Cortex platform[cite: 1].</li>
-            <li>Secured applications with <strong>OAuth 2.0 / OIDC (Azure Entra ID)</strong> and configured CI/CD with SonarQube quality gates[cite: 1].</li>
-            <li>Accelerated delivery using Spec-Driven GenAI workflows (GitHub Copilot) and end-to-end testing with Playwright & Jest[cite: 1].</li>
+            <li><strong>SaaS Platform Leadership:</strong> Led the end-to-end development of a Spring Boot agricultural SaaS platform, optimizing seed allocation and distribution workflows across multiple regions.</li>
+            <li><strong>Full-Stack & API Design:</strong> Engineered high-performance React frontend data interfaces powered by Node.js and Spring Boot APIs documented via OpenAPI/Swagger.</li>
+            <li><strong>Database Management & ORM:</strong> Managed database schema evolution using Flyway migrations and Hibernate/JPA, ensuring reliable and maintainable data persistence.</li>
+            <li><strong>Identity & Access Management:</strong> Implemented enterprise SSO and role-based access control via Azure Entra ID, OAuth 2.0, and OIDC to secure regional tenant data.</li>
+            <li><strong>DevOps & Quality Culture:</strong> Drove CI/CD automation via GitHub Actions on Azure and instituted SonarQube quality gates to boost release velocity and overall code health.</li>
+            <li><strong>Automated E2E Testing:</strong> Established Playwright and Jest test suites covering complex regional logic (Supply, West, East), ensuring zero-downtime releases.</li>
           </ul>
         </div>
       </div>
@@ -181,11 +212,11 @@
           <h3 class="text-xl font-bold text-white">Full Stack Developer</h3>
           <p class="text-indigo-400 text-sm font-medium mb-4">Ross Video</p>
           <ul class="text-slate-300 text-sm space-y-2 list-disc list-inside">
-            <li>Built Spring Boot & Grafana performance visualizer, <strong>reducing manual analysis effort by &gt;80%</strong>[cite: 1].</li>
-            <li>Designed distributed caching via Hazelcast, cutting inter-service latency by <strong>50%</strong>[cite: 1].</li>
-            <li>Engineered event-driven <strong>WebSocket</strong> state sync between OverDrive and ProjectServer[cite: 1].</li>
-            <li>Architected internal mock license servers, reducing regression cycle times by <strong>&gt;70%</strong>[cite: 1].</li>
-            <li>Containerized microservices using Docker and integrated AWS CloudWatch/CloudTrail observability[cite: 1].</li>
+            <li>Built Spring Boot & Grafana performance visualizer, <strong>reducing manual analysis effort by &gt;80%</strong>.</li>
+            <li>Designed distributed caching via Hazelcast, cutting inter-service latency by <strong>50%</strong>.</li>
+            <li>Engineered event-driven <strong>WebSocket</strong> state sync between OverDrive and ProjectServer.</li>
+            <li>Architected internal mock license servers, reducing regression cycle times by <strong>&gt;70%</strong>.</li>
+            <li>Containerized microservices using Docker and integrated AWS CloudWatch/CloudTrail observability.</li>
           </ul>
         </div>
       </div>
@@ -204,9 +235,9 @@
           <p class="text-emerald-400 text-sm font-medium mb-4">Nucleus Software</p>
           <ul class="text-slate-300 text-sm space-y-2 list-disc list-inside">
             <li>Engineered financial validation engines (DBR risk assessment) for banking & capital market clients.</li>
-            <li>Developed REST/SOAP loan computation services and enforced Spring Security RBAC[cite: 2].</li>
-            <li>Optimized SQL queries using JProfiler to significantly increase transaction throughput[cite: 2].</li>
-            <li>Served as Scrum Master, orchestrating Agile sprints using Jira[cite: 2].</li>
+            <li>Developed REST/SOAP loan computation services and enforced Spring Security RBAC.</li>
+            <li>Optimized SQL queries using JProfiler to significantly increase transaction throughput.</li>
+            <li>Served as Scrum Master, orchestrating Agile sprints using Jira.</li>
           </ul>
         </div>
       </div>
@@ -234,6 +265,8 @@
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Python</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Spring Boot</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Generative AI</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">GitHub Copilot</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Claude</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Spec-Driven Dev</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Hibernate JPA</span>
         </div>
@@ -263,6 +296,8 @@
         <div class="flex flex-wrap gap-2">
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">AWS (Certified)</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Azure Functions</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Azure App Services</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Azure DevOps</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Docker</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Kubernetes</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">GitHub Actions</span>
@@ -277,6 +312,9 @@
         <h3 class="text-lg font-bold text-white mb-3">Distributed & Ops</h3>
         <div class="flex flex-wrap gap-2">
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Hazelcast</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Redis</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Kafka</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">ActiveMQ</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Grafana</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">New Relic</span>
           <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">WebSocket</span>
@@ -305,7 +343,7 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">High-Performance E-Commerce Platform</h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Designed LQN and sequence diagrams to orchestrate user operations under load[cite: 2]. Implemented multithreading, concurrency, and load-spreading principles to optimize throughput[cite: 2].
+            Designed LQN and sequence diagrams to orchestrate user operations under load. Implemented multithreading, concurrency, and load-spreading principles to optimize throughput.
           </p>
         </div>
         <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
@@ -324,7 +362,7 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">ML Accident Prediction Study</h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Collected and preprocessed Ottawa traffic data following CRISP-DM methodology to design predictive models using Deep Learning techniques[cite: 2].
+            Collected and preprocessed Ottawa traffic data following CRISP-DM methodology to design predictive models using Deep Learning techniques.
           </p>
         </div>
         <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
@@ -343,7 +381,7 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Municipal Financial Data Pipeline</h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Engineered automated data collection and integration pipelines across Canadian municipal, provincial, and federal financial datasets[cite: 2].
+            Engineered automated data collection and integration pipelines across Canadian municipal, provincial, and federal financial datasets.
           </p>
         </div>
         <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
@@ -367,7 +405,7 @@
         <div class="space-y-6">
           <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
             <span class="text-xs font-mono text-sky-400">2018 - 2019</span>
-            <h3 class="text-lg font-bold text-white mt-1">Master of Computer Engineering</h3>
+            <h3 class="text-lg font-bold text-white mt-1">Master of Electrical and Computer Engineering</h3>
             <p class="text-slate-400 text-sm">Specialization in Data Science</p>
             <p class="text-slate-500 text-xs mt-2">Carleton University, Ottawa, ON, Canada</p>
           </div>
@@ -427,7 +465,7 @@
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
       <p>© <span id="current-year"></span> Devinder Singh Saggu. Built for high performance.</p>
       <div class="flex space-x-6 text-slate-400">
-        <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" class="hover:text-sky-400"><i class="fa-brands fa-linkedin text-lg"></i></a>
+        <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400"><i class="fa-brands fa-linkedin text-lg"></i></a>
         <a href="mailto:saggudevindersingh@gmail.com" class="hover:text-sky-400"><i class="fa-solid fa-envelope text-lg"></i></a>
       </div>
     </div>
@@ -435,6 +473,29 @@
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuIcon = document.getElementById('mobile-menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.replace('fa-xmark', 'fa-bars');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.replace('fa-bars', 'fa-xmark');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
   </script>
 
 </body>
