@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer</title>
+  <title>Devinder Singh | Senior Full Stack & Distributed Systems Engineer</title>
 
-  <meta name="description" content="Devinder Singh Saggu - Senior Full Stack & Distributed Systems Engineer with 10+ years building cloud-native architectures, event-driven platforms, and AI-driven workflows using Java, Spring Boot, React, Python, Docker, Azure & AWS.">
-  <meta name="author" content="Devinder Singh Saggu">
+  <meta name="description" content="Devinder Singh - Senior Full Stack & Distributed Systems Engineer with 10+ years building cloud-native architectures, event-driven platforms, and AI-driven workflows using Java, Spring Boot, React, Python, Docker, Azure & AWS.">
+  <meta name="author" content="Devinder Singh">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer">
+  <meta property="og:title" content="Devinder Singh | Senior Full Stack & Distributed Systems Engineer">
   <meta property="og:description" content="10+ years engineering scalable backend services, event-driven distributed platforms, and responsive web applications using Java, Spring Boot, React, Python, Docker, and Azure/AWS.">
   <meta property="og:image" content="profile.jpg">
   <!-- TODO: set og:url to your deployed domain once hosted -->
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Devinder Singh Saggu | Senior Full Stack & Distributed Systems Engineer">
+  <meta name="twitter:title" content="Devinder Singh | Senior Full Stack & Distributed Systems Engineer">
   <meta name="twitter:description" content="10+ years engineering scalable backend services, event-driven distributed platforms, and responsive web applications.">
   <meta name="twitter:image" content="profile.jpg">
   
@@ -64,7 +64,7 @@
   <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#about" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-        <span class="text-sky-400 font-mono">&lt;DS&gt;</span> Devinder Singh Saggu
+        <span class="text-sky-400 font-mono">&lt;DS&gt;</span> Devinder Singh
       </a>
       <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
@@ -133,6 +133,9 @@
           <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
             <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
           </a>
+          <a href="Resume.pdf" download id="resume-download-link" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold transition-all flex items-center gap-2">
+            <i class="fa-solid fa-download text-sky-400"></i> Download Resume
+          </a>
           <a href="tel:+16135012158" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold transition-all flex items-center gap-2">
             <i class="fa-solid fa-phone text-sky-400"></i> +1 (613) 501-2158
           </a>
@@ -146,12 +149,12 @@
           <div class="relative p-3">
             <img
               src="profile.jpg"
-              alt="Devinder Singh Saggu"
+              alt="Devinder Singh"
               class="w-full aspect-square object-cover rounded-full"
             >
             <div class="flex items-center justify-center gap-3 mt-4 text-center">
               <div>
-                <p class="text-white font-bold text-sm">Devinder Singh Saggu</p>
+                <p class="text-white font-bold text-sm">Devinder Singh</p>
                 <p class="text-slate-400 text-xs">Senior Full Stack & Distributed Systems Engineer</p>
               </div>
               <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="shrink-0 text-sky-400 hover:text-sky-300 transition-colors" aria-label="LinkedIn Profile">
@@ -463,7 +466,7 @@
   <!-- Footer -->
   <footer class="py-8 border-t border-slate-800/80 text-center text-slate-500 text-sm">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p>© <span id="current-year"></span> Devinder Singh Saggu. Built for high performance.</p>
+      <p>© <span id="current-year"></span> Devinder Singh. Built for high performance.</p>
       <div class="flex space-x-6 text-slate-400">
         <a href="https://linkedin.com/in/devinder-singh-saggu" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400"><i class="fa-brands fa-linkedin text-lg"></i></a>
         <a href="mailto:saggudevindersingh@gmail.com" class="hover:text-sky-400"><i class="fa-solid fa-envelope text-lg"></i></a>
@@ -496,6 +499,27 @@
     });
 
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+    // Force a file download via Blob instead of navigation, since the
+    // download attribute is ignored on file:// origins by some browsers.
+    document.getElementById('resume-download-link').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const link = e.currentTarget;
+      try {
+        const response = await fetch(link.href);
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const tempLink = document.createElement('a');
+        tempLink.href = blobUrl;
+        tempLink.download = 'Devinder_Singh_Saggu_Resume.pdf';
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        tempLink.remove();
+        URL.revokeObjectURL(blobUrl);
+      } catch {
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+      }
+    });
   </script>
 
 </body>
